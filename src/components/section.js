@@ -37,7 +37,7 @@ const Wrap = styled.div`
 
 const Itemtext = styled.div`
 	padding-top: 15vh;
-	text-aling: center;
+	text-align: center;
 `;
 
 const Button = styled.div``;
