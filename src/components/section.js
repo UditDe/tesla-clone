@@ -1,18 +1,23 @@
 import React from "react";
 import styled from "styled-components";
+import { Fade } from "react-awesome-reveal";
 
-function Section() {
+function Section(props) {
 	return (
-		<Wrap>
-			<Itemtext>
-				<h1>Model - S</h1>
-				<p>Order Online For Touch-Less delivery</p>
-			</Itemtext>
+		<Wrap bgImg={props.backgroundImg}>
+			<Fade bottom>
+				<Itemtext>
+					<h1>{props.title}</h1>
+					<p>{props.description}</p>
+				</Itemtext>
+			</Fade>
 			<Button>
-				<ButtonGrp>
-					<UpButton>Custom Order</UpButton>
-					<DownButton>Exiting Inventory</DownButton>
-				</ButtonGrp>
+				<Fade bottom>
+					<ButtonGrp>
+						<UpButton>{props.leftBtnText}</UpButton>
+						{props.rightBtnText && <DownButton>{props.rightBtnText}</DownButton>}
+					</ButtonGrp>
+				</Fade>
 				<DownArrow src="/images/down-arrow.svg" />
 			</Button>
 		</Wrap>
@@ -26,7 +31,8 @@ export default Section;
 const Wrap = styled.div`
 	width: 100vw;
 	height: 100vh;
-	background-image: url("/images/model-s.jpg");
+	/* background-image: url("/images/model-s.jpg"); */
+	background-image: ${(props) => `url("/images/${props.bgImg}")`};
 	background-size: cover;
 	background-repeat: no-repeat;
 	display: flex;
