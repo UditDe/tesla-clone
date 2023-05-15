@@ -7,10 +7,6 @@ const Container = styled.div`
 	flex-direction: column;
 	flex-wrap: nowrap;
 	box-sizing: border-box;
-	-webkit-box-align: center;
-	-webkit-box-direction: normal;
-	-webkit-box-orient: vertical;
-	-webkit-font-smoothing: antialiased;
 `;
 
 function Home() {

@@ -18,7 +18,7 @@ function Header() {
 				{cars &&
 					cars.map((car, index) => {
 						return (
-							<a href="#/" key={index}>
+							<a href={`#${car}`} key={index}>
 								{car}
 							</a>
 						);
@@ -52,7 +52,7 @@ function Header() {
 					cars.map((car, index) => {
 						return (
 							<li key={index}>
-								<a href="#/">{car}</a>
+								<a href={`#${car}`}>{car}</a>
 							</li>
 						);
 					})}
@@ -87,6 +87,7 @@ const Menu = styled.div`
 		text-transform: uppercase;
 		padding: 0 10px;
 		flex-wrap: nowrap;
+		scroll-behavior: smooth;
 	}
 
 	@media (max-width: 768px) {
