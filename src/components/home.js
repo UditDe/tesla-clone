@@ -3,7 +3,14 @@ import styled from "styled-components";
 import Section from "./section";
 
 const Container = styled.div`
-	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	box-sizing: border-box;
+	-webkit-box-align: center;
+	-webkit-box-direction: normal;
+	-webkit-box-orient: vertical;
+	-webkit-font-smoothing: antialiased;
 `;
 
 function Home() {

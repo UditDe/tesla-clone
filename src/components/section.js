@@ -15,7 +15,9 @@ function Section(props) {
 				<Fade bottom>
 					<ButtonGrp>
 						<UpButton>{props.leftBtnText}</UpButton>
-						{props.rightBtnText && <DownButton>{props.rightBtnText}</DownButton>}
+						{props.rightBtnText && (
+							<DownButton>{props.rightBtnText}</DownButton>
+						)}
 					</ButtonGrp>
 				</Fade>
 				<DownArrow src="/images/down-arrow.svg" />
@@ -34,6 +36,7 @@ const Wrap = styled.div`
 	/* background-image: url("/images/model-s.jpg"); */
 	background-image: ${(props) => `url("/images/${props.bgImg}")`};
 	background-size: cover;
+	background-position: center;
 	background-repeat: no-repeat;
 	display: flex;
 	flex-direction: column; //switches the functionalities of justify-content and align items
